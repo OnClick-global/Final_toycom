@@ -23,25 +23,22 @@ class CouponController extends Controller
 
     public function apply(Request $request)
     {
-
         $validator = Validator::make($request->all(), [
             'code' => 'required',
         ]);
-
-        if ($validator->errors()->count()>0) {
+        if ($validator->errors()->count() > 0) {
             return response()->json(['errors' => Helpers::error_processor($validator)], 403);
         }
-
         try {
             $coupon = Coupon::active()->where(['code' => $request['code']])->first();
             if (isset($coupon)) {
                 if ($coupon['limit'] == null) {
                     return response()->json($coupon, 200);
                 } else {
-                    $total = Order::where(['user_id' => $request->user()->id, 'coupon_code' => $request['code']])->count();
+                    $total = Order::where('coupon_code', $request['code'])->count();
                     if ($total < $coupon['limit']) {
                         return response()->json($coupon, 200);
-                    }else{
+                    } else {
                         return response()->json([
                             'errors' => [
                                 ['code' => 'coupon', 'message' => 'Coupon code usage limit is over for you!']
@@ -49,7 +46,6 @@ class CouponController extends Controller
                         ], 401);
                     }
                 }
-
             } else {
                 return response()->json([
                     'errors' => [
