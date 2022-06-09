@@ -1,0 +1,270 @@
+/**
+ *
+ * Apply Here your Custom CSS
+ *
+*/
+
+body {
+	
+}
+
+.upload-progress {
+    height: 10px!important;
+    margin-bottom: 0!important;
+    -webkit-border-top-left-radius: 0!important;
+    -webkit-border-top-right-radius: 0!important;
+    -moz-border-radius-topleft: 0!important;
+    -moz-border-radius-topright: 0!important;
+    border-top-left-radius: 0!important;
+    border-top-right-radius: 0!important;
+    -webkit-border-bottom-right-radius: 3px!important;
+    -webkit-border-bottom-left-radius: 3px!important;
+    -moz-border-radius-bottomright: 3px!important;
+    -moz-border-radius-bottomleft: 3px!important;
+    border-bottom-right-radius: 3px!important;
+    border-bottom-left-radius: 3px!important;
+    background-color: #ebebeb;
+}
+
+.fileinput-button {
+    -webkit-border-bottom-right-radius: 0!important;
+    -webkit-border-bottom-left-radius: 0!important;
+    -moz-border-radius-bottomright: 0!important;
+    -moz-border-radius-bottomleft: 0!important;
+    border-bottom-right-radius: 0!important;
+    border-bottom-left-radius: 0!important;
+    border-bottom: 0;
+}
+
+.form-group.required .control-label:first-child:after { 
+    color: #d00;
+    content: "*";
+    position: absolute;
+    margin-left: 8px;
+    top: 7px;
+}
+
+.form-control[dir='rtl'], .ar {
+    font-family: Tahoma!important;
+}
+
+.ms-container .ms-list {
+    width: 200px;
+    height: 400px;
+}
+
+.ms-optgroup {
+    margin: 0;
+    padding: 0;
+}
+
+.ms-optgroup .ms-elem-selectable, .ms-optgroup .ms-elem-selection {
+    padding-left: 10px;
+}
+
+.ms-optgroup-label {
+    border-bottom: 1px solid #ebebeb;
+}
+
+.ms-container .ms-list > li:hover {
+    background: #f5f5f6;
+    color: #949494;
+}
+
+.ms-elem-selectable:hover {
+    background: #303641;
+    color: #fff;
+}
+
+.table td {
+    vertical-align: middle!important;
+}
+
+.panel-options-controls {
+    padding-top: 30px;
+    padding-bottom: 15px;
+}
+
+.dv_datatable_export {
+    padding: 10px 12px;
+    border: 1px solid #ebebeb;
+    border-bottom: 0;
+    background: #fafafa;
+    margin: 0 15px;
+    border-radius: 3px 3px 0 0;
+}
+
+.daterange-inline {
+    background-color: #fff!important;
+    color: #555555!important;
+    padding: 6px 12px!important;
+}
+
+.calendar-env {
+    position: relative;
+}
+
+.calendar-env .calendar-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,.5);
+    z-index: 100001;
+}
+
+.calendar-env .calendar-overlay .dv-loader {
+    border: 3px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 3px solid #373e4a;
+    width: 30px;
+    height: 30px;
+    -webkit-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -15px;
+    margin-top: -15px;
+}
+
+ @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.calendar-env .calendar-body {
+    width: 100%;
+    float: right;
+}
+
+.datepicker.datepicker-dropdown {
+    z-index: 100000 !important;
+}
+
+.dataTables_wrapper {
+    background-color: #fafafa!important;
+}
+
+div.dt-buttons {
+    height: 50px;
+}
+
+.fc-toolbar .fc-state-active, .fc-toolbar .ui-state-active {
+    color: #949494!important;
+}
+
+.fc-event-container .fc-content {
+    cursor: pointer;
+}
+
+.dv_seat_empty {
+    width: 40px;
+    height: 40px;
+    background-color: #cccccc;
+    border-radius: 25px;
+}
+
+.img_seat {
+    width: 40px;
+    height: 40px;
+    border: solid 1px #cccccc;
+    border-radius: 25px;
+}
+
+form .dv_seat_empty {
+    width: 30px;
+    height: 30px;
+    background-color: #cccccc;
+    border-radius: 2px;
+    text-align: center;
+    cursor: pointer;
+}
+
+form .dv_seat_empty input {
+    cursor: pointer;
+}
+
+form .img_seat {
+    width: 30px;
+    height: 30px;
+    border: solid 1px #cccccc;
+    border-radius: 2px;
+}
+
+.fc-day-grid-event img {
+    display: none;
+}
+
+.fc-time-grid-event img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 36px;
+    height: 36px;
+}
+
+.dv_image {
+    display: inline;
+    position: relative;
+    overflow: auto;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.dv_image img {
+    width: 100%;
+}
+
+.dv_image a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-image: url(../images/icon_close.png);
+    background-repeat: no-repeat;
+}
+
+.dv_image a:link, .dv_image a:visited, .dv_image a:active, .dv_image a:hover {
+    text-decoration: none;
+}
+
+.dv_image input {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    border: none;
+    background-color: rgba(255,255,255,.9);
+}
+
+.dv_image div {
+    padding: 0 5px 0 0!important;
+}
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.no-gutters > [class*="col-"] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.select2 {
+    visibility: visible!important;
+    width: auto!important;
+}
+
+.select2-container {
+    z-index: 10001;
+}
