@@ -120,6 +120,7 @@ class ProductController extends Controller
             'barcode' => 'required',
             'total_stock' => 'required|numeric|min:1',
             'price' => 'required|numeric|min:1',
+            'beforeDiscount' => 'nullable|numeric|min:0',
             'gomla_price' => 'required|numeric',
         ], [
             'name.required' => 'Product name is required!',
@@ -213,6 +214,7 @@ class ProductController extends Controller
         $p->total_stock = $request->total_stock;
         $p->brand_id = $request->brand_id;
         $p->gender = $request->gender;
+        $p->beforeDiscount = $request->beforeDiscount;
         $p->attributes = $request->has('attribute_id') ? json_encode($request->attribute_id) : json_encode([]);
         $p->save();
         $age_data['product_id'] = $p->id;
@@ -257,6 +259,7 @@ class ProductController extends Controller
             'by_date' => 'required',
             'barcode' => 'required',
             'gomla_price' => 'required|numeric',
+            'beforeDiscount' => 'nullable|numeric|min:0',
         ], [
             'name.required' => 'Product name is required!',
             'category_id.required' => 'category  is required!',
@@ -391,6 +394,7 @@ class ProductController extends Controller
         $p->barcode = $request->barcode;
         $p->brand_id = $request->brand_id;
         $p->gender = $request->gender;
+        $p->beforeDiscount = $request->beforeDiscount;
         //  $p->price_group = $request->pricegroup;
         $p->attributes = $request->has('attribute_id') ? json_encode($request->attribute_id) : json_encode([]);
         $p->save();

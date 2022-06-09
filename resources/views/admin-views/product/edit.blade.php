@@ -78,7 +78,7 @@
 {{--                            </div>--}}
 {{--                        </div>--}}
                         <div class="row">
-                            <div class="col-6">
+                            <div class="col-4">
                                 <div class="form-group">
                                     <label class="input-label"
                                            for="exampleFormControlInput1">{{trans('messages.price_seller')}}</label>
@@ -88,7 +88,16 @@
                                            placeholder="Ex : 100.000" required>
                                 </div>
                             </div>
-                            <div class="col-6">
+                            <div class="col-4">
+                                <div class="form-group">
+                                    <label class="input-label"
+                                           for="exampleFormControlInput1">السعر قبل الخصم</label>
+                                    <input type="number" min="0.001" max="100000" step="0.001" name="beforeDiscount" value="{{$product->beforeDiscount}}"
+                                           class="form-control"
+                                           placeholder="Ex : 100.000">
+                                </div>
+                            </div>
+                            <div class="col-4">
                                 <div class="form-group">
                                     <label class="input-label"
                                            for="exampleFormControlInput1">{{trans('messages.gomla_price')}}</label>
