@@ -28,7 +28,7 @@
                 <form action="{{route('admin.business-settings.update-location')}}" method="post"
                       enctype="multipart/form-data">
                     @csrf
-                    @php($data=\App\Model\Branch::find(1))
+                    @php($data=\App\Model\Branch::first())
                     <div class="row">
                         {{--<div class="col-md-12 col-12">
                             <label class="toggle-switch d-flex align-items-center mb-3" for="customSwitch1">
