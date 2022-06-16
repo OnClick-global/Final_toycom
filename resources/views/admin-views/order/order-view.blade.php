@@ -339,7 +339,7 @@
                                                     <a class="btn btn-danger">{{trans('messages.no_gift_card')}}</a>
                                                 </div>
                                             @endif
-                                            @if($detail['wraping_id'] != 0)
+                                            @if($detail['wraping_id'] != 0 || $detail['wraping_id'] != -1)
                                                 <div class="col col-md-2 align-self-center">
                                                     <a data-price="{{$detail->wraping_price}}"
                                                        @if(app()->getLocale() == 'ar')
