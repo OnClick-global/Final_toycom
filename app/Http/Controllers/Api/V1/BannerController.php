@@ -37,7 +37,8 @@ class BannerController extends Controller
                 "created_at" => "2021-08-22 15:50:38",
                 "updated_at" => "2021-09-06 10:18:15",
             ];
-            $data['wraping'] = Gift_warping::all()->prepend($defualt)->sortBy('id');
+//            all()->prepend($defualt)
+            $data['wraping'] = Gift_warping::all()->sortBy('id');
             $data['card_colors'] = CardColor::where('deleted','0')->orderBy('created_at','desc')->get();
             return response()->json($data, 200);
         } catch (\Exception $e) {
