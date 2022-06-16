@@ -90,7 +90,7 @@ class OrderController extends Controller
                     $price = $product['price'];
                 }
                 $wraping_price = 0;
-                if ($c['wraping_id'] != null) {
+                if ($c['wraping_id'] != -1) {
                     $exists_gift = Gift_warping::find($c['wraping_id']);
                     if ($exists_gift) {
                         $wraping_price = $exists_gift->price;
